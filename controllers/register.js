@@ -21,7 +21,9 @@ const handleRegister = (req, res, db, bcrypt) => {
             // loginEmail[0].email --> this now returns the email
             email: loginEmail[0].email,
             name: name,
-            joined: new Date()
+            joined: new Date(),
+            age: 0,
+            pet: 'none'
           })
           .then(user => {
             res.json(user[0]);
